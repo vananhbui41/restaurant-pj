@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-chair"></i>Create a Table
+        <h3><i class="fas fa-chair"></i> Tạo Bàn Mới</h3>
         <hr>
         @if($errors->any())
           <div class="alert alert-danger">
@@ -19,10 +19,10 @@
         <form action="/management/table" method="POST">
           @csrf
           <div class="form-group">
-            <label for="tableName">Table Name</label>
-            <input type="text" name="name" class="form-control" placeholder="Table...">
+            <label for="tableName">Tên Bàn</label>
+            <input type="text" name="name" class="form-control" placeholder="Bàn ...">
           </div>
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-primary">Lưu</button>
         </form>
       </div>
     </div>

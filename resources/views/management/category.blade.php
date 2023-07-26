@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
       @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-align-justify"></i>Category
-        <a href="/management/category/create " class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create Category</a>
+        <h3><i class="fas fa-align-justify"></i> Phân Loại Món Ăn</h3>
+        <a href="/management/category/create " class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Tạo Phân Loại Mới</a>
         <hr>
         @if(Session()->has('status'))
           <div class="alert alert-success">
@@ -18,9 +18,9 @@
           <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Category</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Delete</th>
+              <th scope="col">Tên Phân Loại</th>
+              <th scope="col">Sửa</th>
+              <th scope="col">Xóa</th>
             </tr>
           </thead>
           <tbody>
@@ -35,7 +35,7 @@
                 <form action="/management/category/{{$category->id}}" method="post">
                   @csrf
                   @method('DELETE')
-                  <input type="submit" value="Delete" class="btn btn-danger">
+                  <input type="submit" value="Xóa" class="btn btn-danger">
                 </form>
                 </td>
               </tr>

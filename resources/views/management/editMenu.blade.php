@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-hamburger"></i>Edit a Item
+        <h3><i class="fas fa-hamburger"></i> Sửa Món Ăn </h3>
         <hr>
         @if($errors->any())
           <div class="alert alert-danger">
@@ -20,34 +20,34 @@
           @csrf
           @method('PUT')
           <div class="form-group">
-            <label for="menuName">Item Name</label>
+            <label for="menuName">Tên Món Ăn</label>
             <input type="text" name="name" value="{{$menu->name}}" class="form-control" placeholder="Item...">
           </div>
-          <label for="menuPrice">Price</label>
+          <label for="menuPrice">Giá Tiền</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text">$</span>
+              <span class="input-group-text">VNĐ</span>
             </div>
-            <input type="text" name="price" value="{{$menu->price}}" class="form-control" aria-label="Amount (to the nearest dollor)">
+            <input type="text" name="price" value="{{$menu->price}}" class="form-control" aria-label="">
           </div>
-          <label for="MenuImage">Image</label>
+          <label for="MenuImage">Ảnh</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Upload</span>
             </div>
             <div class="custom-file">
               <input type="file" name="image" class="custom-file-input" id="inputGroupFile01">
-              <label class="custom-file-label" for="inputGroupFile01">Choose File</label>            
+              <label class="custom-file-label" for="inputGroupFile01">Chọn Ảnh</label>            
             </div>
           </div>
 
           <div class="form-group">
-            <label for="Description">Description</label>
-            <input type="text" name="description" value="{{$menu->description}}" class="form-control" placeholder="Description...">
+            <label for="Description">Mô Tả</label>
+            <input type="text" name="description" value="{{$menu->description}}" class="form-control" placeholder="Mô tả...">
           </div>
 
           <div class="form-group">
-            <label for="Category">Category</label>
+            <label for="Category">Phân Loại</label>
             <select class="form-control" name="category_id">
               @foreach ($categories as $category)
                 <option value="{{$category->id}}" {{$menu->category_id === $category->id ? 'selected': ''}}>{{$category->name}}</option>

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-user"></i>Edit a User
+        <h3> <i class="fas fa-user"></i> Sửa Thông Tin Nhân Viên </h3>
         <hr>
         @if($errors->any())
           <div class="alert alert-danger">

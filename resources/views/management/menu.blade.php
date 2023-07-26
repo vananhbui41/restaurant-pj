@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
       @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-hamburger"></i>Item
-        <a href="/management/menu/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create Item</a>
+        <h3><i class="fas fa-hamburger"></i> Món Ăn</h3>
+        <a href="/management/menu/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Tạo Món Ăn Mới</a>
         <hr>
         @if(Session()->has('status'))
           <div class="alert alert-success">
@@ -18,13 +18,13 @@
           <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Price</th>
-              <th scope="col">Picture</th>
-              <th scope="col">Description</th>
-              <th scope="col">Category</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Delete</th>
+              <th scope="col">Tên</th>
+              <th scope="col">Giá Tiền</th>
+              <th scope="col">Ảnh</th>
+              <th scope="col">Mô Tả</th>
+              <th scope="col">Phân Loại</th>
+              <th scope="col">Sửa</th>
+              <th scope="col">Xóa</th>
             </tr>
           </thead>
           <tbody>

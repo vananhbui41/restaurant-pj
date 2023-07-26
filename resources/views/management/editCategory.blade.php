@@ -3,16 +3,9 @@
 @section('content')
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div class="list-group">
-          <a href="/management/category" class="list-group-item list-group-item-action"><i class="fas fa-align-justify"></i> Category</a>
-          <a class="list-group-item list-group-item-action"><i class="fas fa-hamburger"></i> Item</a>
-          <a class="list-group-item list-group-item-action"><i class="fas fa-chair"></i> Table</a>
-          <a class="list-group-item list-group-item-action"><i class="fas fa-users-cog"></i> User</a>
-        </div>
-      </div>
+      @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-align-justify"></i>Edit a Category
+        <h3><i class="fas fa-align-justify"></i>Sửa Phân Loại</h3>
         <hr>
         @if($errors->any())
           <div class="alert alert-danger">
@@ -27,10 +20,10 @@
           @csrf
           @method('PUT')
           <div class="form-group">
-            <label for="categoryName">Category Name</label>
+            <label for="categoryName">Tên Phân Loại</label>
             <input type="text" name="name" value="{{$category->name}}"  class="form-control" placeholder="Category...">
           </div>
-          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="submit" class="btn btn-primary">Lưu</button>
         </form>
       </div>
     </div>

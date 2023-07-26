@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-align-justify"></i>Create a Category
+        <h3><i class="fas fa-align-justify"></i> Tạo Phân Loại Mới</h3>
         <hr>
         @if($errors->any())
           <div class="alert alert-danger">
@@ -19,10 +19,10 @@
         <form action="/management/category" method="POST">
           @csrf
           <div class="form-group">
-            <label for="categoryName">Category Name</label>
-            <input type="text" name="name" class="form-control" placeholder="Category...">
+            <label for="categoryName">Tên Phân Loại</label>
+            <input type="text" name="name" class="form-control" placeholder="VD: Món Chính...">
           </div>
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-primary">Lưu</button>
         </form>
       </div>
     </div>

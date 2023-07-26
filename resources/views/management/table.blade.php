@@ -4,8 +4,8 @@
     <div class="row justify-content-center">
       @include('management.inc.sidebar')
       <div class="col-md-8">
-        <i class="fas fa-chair"></i>Table
-        <a href="/management/table/create " class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create a Table</a>
+        <h3><i class="fas fa-chair"></i> Bàn</h3>
+        <a href="/management/table/create " class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Tạo Bàn Mới</a>
         <hr>
         @if(Session()->has('status'))
           <div class="alert alert-success">
@@ -17,10 +17,10 @@
           <thead>
             <tr>
               <th scope="col">ID</th>
-              <th scope="col">Table</th>
-              <th scope="col">Status</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Delete</th>
+              <th scope="col">Tên Bàn</th>
+              <th scope="col">Trạng Thái</th>
+              <th scope="col">Sửa</th>
+              <th scope="col">Xóa</th>
             </tr>
           </thead>
           <tbody>
@@ -30,13 +30,13 @@
                 <td>{{$table->name}}</td>
                 <td>{{$table->status}}</td>
                 <td>
-                  <a href="/management/table/{{$table->id}}/edit" class="btn btn-warning">Edit</a>
+                  <a href="/management/table/{{$table->id}}/edit" class="btn btn-warning">Sửa</a>
                 </td>
                 <td>
                   <form action="/management/table/{{$table->id}}" method="post">
                   @csrf 
                   @method('DELETE')
-                  <input type="submit" value="Delete" class="btn btn-danger">
+                  <input type="submit" value="Xóa" class="btn btn-danger">
                   </form>
                 </td>
               </tr>
